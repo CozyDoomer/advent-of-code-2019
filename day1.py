@@ -1,4 +1,4 @@
-from utils.parse_file_template import parse_input_file
+from utils.parse_file_template import parse_input_file_linewise
 
 
 def calc_fuel(mass):
@@ -24,10 +24,10 @@ def test_calc_fuel_recursive():
 
 
 if __name__ == "__main__":
-    INPUT_LIST = parse_input_file("input_day1.txt", int)
+    INPUT_LIST = parse_input_file_linewise("input_day1.txt", int)
 
     test_calc_fuel()
-    print(f"Part One: {sum([calc_fuel(input_int) for input_int in INPUT_LIST])}")
+    print(f"Part One: {sum([calc_fuel(input_int) for input_int in INPUT_LIST])}") # 3336439
 
     test_calc_fuel_recursive()
-    print(f"Part Two: {sum([calc_fuel_recursive(input_int) for input_int in INPUT_LIST])}")
+    print(f"Part Two: {sum([calc_fuel_recursive(input_int) for input_int in INPUT_LIST])}") # 5001791
