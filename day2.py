@@ -1,4 +1,4 @@
-from utils.parse_file_template import parse_input_file_comma_seperated
+from utils.parse_file_template import parse_input_file_seperated
 
 
 def calc_intcode(input_list):
@@ -34,12 +34,12 @@ def test_calc_intcode():
 
 
 if __name__ == "__main__":
-    INPUT_LIST = parse_input_file_comma_seperated("input_day2.txt", int)
+    INPUT_LIST = parse_input_file_seperated("input_day2.txt", ",", int)
     
     test_calc_intcode()
     INPUT_LIST[1] = 12
     INPUT_LIST[2] = 2
     print(f"Part One: {calc_intcode(INPUT_LIST)[0]}") # 3562672
     
-    INPUT_LIST = parse_input_file_comma_seperated("input_day2.txt", int)
+    INPUT_LIST = parse_input_file_seperated("input_day2.txt", ",", int)
     print(f"Part Two: {find_noun_verb(INPUT_LIST, 19690720)}") # 8250

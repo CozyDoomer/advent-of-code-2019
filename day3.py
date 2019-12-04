@@ -1,4 +1,4 @@
-from utils.parse_file_template import parse_input_file_comma_seperated, parse_input_file_linewise
+from utils.parse_file_template import parse_input_file_linewise
 
 
 def calc_points(A):
