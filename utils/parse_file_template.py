@@ -1,4 +1,4 @@
-def parse_input_file_string(path, type):
+def parse_input_file_string(path):
     with open(path) as input_file:
         input_list = input_file.read()
         return input_list
