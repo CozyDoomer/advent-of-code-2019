@@ -1,7 +1,7 @@
 from utils.parse_file_template import parse_input_file_seperated
 
 
-def TEST(input_list, input_param):
+def validate_intcode(input_list, input_param):
     p = 0
     while input_list[p] != 99:
         args = {1: input_list[p + 1] if int((input_list[p] % 1000) / 100) else input_list[input_list[p + 1]],
@@ -24,7 +24,7 @@ def TEST(input_list, input_param):
 
 if __name__ == "__main__":
     INPUT_LIST = parse_input_file_seperated("input_day5.txt", ",", int)
-    print(f"{TEST(INPUT_LIST, 1)}")  # part 1
+    print(f"{validate_intcode(INPUT_LIST, 1)}")  # part 1
 
     INPUT_LIST = parse_input_file_seperated("input_day5.txt", ",", int)
-    print(f"{TEST(INPUT_LIST, 5)}")  # part 2
+    print(f"{validate_intcode(INPUT_LIST, 5)}")  # part 2
