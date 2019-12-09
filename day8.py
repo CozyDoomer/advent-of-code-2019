@@ -14,7 +14,7 @@ def decode_image(input_list):
 
 
 if __name__ == "__main__":
-    input_list = [int(value) for value in list(parse_input_file_string("input_day8.txt"))]
+    input_list = [int(value) for value in list(parse_input_file_string("input_day8.txt"))[:-1]]
     img_shape = (-1, 6, 25)
     input_list = np.reshape(input_list, img_shape)
 
